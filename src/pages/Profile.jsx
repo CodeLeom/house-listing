@@ -1,9 +1,9 @@
-
+import SignIn from './SignIn'
 
 function Profile() {
   return (
     <div>
-      Profile Page 
+      <SignIn />
     </div>
   )
 }
