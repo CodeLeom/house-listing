@@ -41,6 +41,7 @@ function SignUp() {
         displayName: name
       })
 
+      //this to remove password from the form input and add other info to the db
       const formDataCopy = {...formData}
       delete formDataCopy.password
       formDataCopy.timestamp = serverTimestamp()
