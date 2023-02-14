@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { NavLink, Navigate, useNavigate } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import {FaArrowRight} from "react-icons/fa"
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 
@@ -14,14 +14,19 @@ function SignIn() {
 
   const navigate = useNavigate()
 
-  const onChange = () => {
-
+  const onChange = (e) => {
+    setFormData((prevState) => (
+      {
+        ...prevState,
+        [e.target.id]: e.target.value
+      }
+    ))
   }
 
   return (
     <>
-        <div>
-          <header className="">
+        <div className="container">
+          <header className="mb-5">
             Welcome Back
           </header>
 
@@ -34,8 +39,21 @@ function SignIn() {
                 <img src={visibilityIcon} alt="show password" className="showPassword" onClick={() => setShowPass((prevState) => !prevState)} />
               </div>
 
-              <NavLink to='/forgot-password' className="forgotPasswordLink">Forgot Password</NavLink>
+              <Link to='/forgot-password' className="forgotPasswordLink">Forgot Password</Link>
+
+              <div className="signInBar">
+                <p className="signInText">
+                  Sign In
+                </p>
+                <button className="signInButton">
+                  <FaArrowRight fill="white" width={34} height={34} />
+                </button>
+              </div>
             </form>
+
+            {/* Google OAuth */}
+
+            <Link to='/signup' className="registerLink">Sign Up Instead</Link>
           </main>
         </div>
     </>
