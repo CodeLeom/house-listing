@@ -2,7 +2,7 @@
 
 function ForgotPass() {
   return (
-    <div className="mt-5 mb-5">
+    <div>
       Forgot Password
     </div>
   )

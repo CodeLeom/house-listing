@@ -2,7 +2,7 @@
 
 function Profile() {
   return (
-    <div className="mt-5 mb-5">
+    <div>
       Profile Page 
     </div>
   )

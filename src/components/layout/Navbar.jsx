@@ -1,31 +1,26 @@
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import {FaHome} from 'react-icons/fa'
+
 
 function Navbar() {
     
   return (
-    <div>
-        <nav className="navbar sticky-top navbar-expand-xl navbar-dark bg-primary">
-            <div className="container-fluid">
-                <NavLink to='/' className="navbar-brand fw-bold">House Listing Application</NavLink>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                <div className="collapse navbar-collapse show" id="navbarNav">
-                    <ul className="navbar-nav me-auto mb-2 mb-xl-0">
-                        <li className="nav-item">
-                            <NavLink to='/' className={({ isActive }) => isActive ? 'nav-link fw-bold active' : 'nav-link'} aria-current="page">Explore</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/offers' className={({ isActive }) => isActive ? 'nav-link fw-bold active' : 'nav-link'}>Offers</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink to='/profile' className={({ isActive }) => isActive ? 'nav-link fw-bold active' : 'nav-link'}>Profile</NavLink>
-                        </li>
-                    </ul> 
-                </div>
+    <nav className='navbar mb-12 bg-base-100 shadow-lg'>
+    <div className='container mx-auto'>
+        <div className='flex-row px-2 mx-2'>
+            <Link to='/' className='text-lg font-bold align-middle'>
+                House Listing App.
+            </Link>
+        </div>
+        <div className='flex-1 px-2 mx-2'>
+            <div className='flex justify-end'>
+                <Link to='/' className='btn btn-ghost btn-sm rounded-btn' aria-current="page">Explore</Link>
+                <Link to='/offers' className='btn btn-ghost btn-sm rounded-btn' aria-current="page">Offers</Link>
+                <Link to='/profile' className='btn btn-ghost btn-sm rounded-btn' aria-current="page">Profile</Link>
             </div>
-        </nav>
+        </div>
     </div>
+</nav>
   )
 }
 

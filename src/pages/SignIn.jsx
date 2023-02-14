@@ -19,9 +19,9 @@ function SignIn() {
   }
 
   return (
-    <div className="mt-5 mb-5">
+    <>
         <div>
-          <header className="fw-bold mb-3">
+          <header className="">
             Welcome Back
           </header>
 
@@ -38,7 +38,7 @@ function SignIn() {
             </form>
           </main>
         </div>
-    </div>
+    </>
   )
 }
 
