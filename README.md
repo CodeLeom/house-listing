@@ -1,6 +1,6 @@
 # A House Listing Application
 
-> Built with React, Boostrap and Firebase
+> Built with React, tailwind and Firebase
 
 ## Features
 
