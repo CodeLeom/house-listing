@@ -289,7 +289,7 @@ button {
 
 @media (min-width: 1217px) {
   .explore {
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
   }
 }
 @media (max-height: 536) {
@@ -364,6 +364,7 @@ button {
 .exploreCategories {
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 .exploreCategories a {
   width: 48%;
