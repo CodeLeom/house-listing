@@ -62,7 +62,7 @@ function Profile() {
           changeDetails && onSubmit()
           setChangeDetails((prevState) => !prevState)
         }}>
-          {changeDetails ? 'done' : 'change'}
+          {changeDetails ? 'done' : 'Edit Profile'}
         </p>
       </div>
 
