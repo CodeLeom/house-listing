@@ -481,7 +481,7 @@ button {
 .shareIconDiv {
   cursor: pointer;
   position: fixed;
-  top: 3%;
+  top: 13%;
   right: 5%;
   z-index: 2;
   background-color: #ffffff;
@@ -555,7 +555,7 @@ button {
 
 .linkCopied {
   position: fixed;
-  top: 9%;
+  top: 8%;
   right: 5%;
   z-index: 2;
   background-color: #ffffff;
