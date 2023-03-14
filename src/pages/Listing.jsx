@@ -1,9 +1,13 @@
 import {useState, useEffect} from 'react'
 import {Link, useNavigate, useParams} from 'react-router-dom'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/css'
 import 'swiper/css/bundle'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import {getDoc, doc} from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { db } from '../firebase.config'
@@ -41,11 +45,14 @@ function Listing() {
     }
   return (
     <main>
-        <Swiper slidesPerView={1} pagination={{clickable: true}}>
+        <Swiper 
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        navigation
+        slidesPerView={1} pagination={{clickable: true}} scrollbar={{ draggable: true }}>
             {listing.imageUrls.map((url, index) => (
                 <SwiperSlide key={index}>
-                    <div style={{background: `url(${listing.imageUrls[index]}) center no-repeat`, backgroundSize: 'cover'}} className='swiperSlideDiv'>
-
+                    <div style={{background: `url(${listing.imageUrls[index]}) center no-repeat`, backgroundSize: 'cover', height: 300}} className='swiperSlideDiv'>
+                        
                     </div>
                 </SwiperSlide>
             ))}

@@ -22,7 +22,7 @@ function App() {
       <Router>
           <div className='flex flex-col min-h-screen justify-between'>
             <Navbar />
-              <main className='container mb-auto px-3'>
+              <main className='container mb-auto px-3 items-center max-w-full'>
                 <Routes>
                   <Route path='/' element={<Explore />} />
                   <Route path='/offers' element={<Offers />} />
