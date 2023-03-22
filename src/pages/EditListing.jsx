@@ -9,6 +9,7 @@ import Spinner from '../components/layout/Spinner'
 import {toast} from 'react-toastify'
 
 function EditListing() {
+  // eslint-disable-next-line
     const [geolocationEnabled, setGeolocationEnabled] = useState(true)
     const [listing, setListing] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -43,6 +44,7 @@ function EditListing() {
         toast.error('You can not edit this listing')
         navigate('/')
       }
+        // eslint-disable-next-line
     }, [])
 
     //fetch listings from firebase to edit
@@ -147,6 +149,8 @@ function EditListing() {
                     case 'running':
                         console.log('Upload is running');
                         break;
+                    default:
+                      break;
                     }
                 }, 
                 (error) => {
