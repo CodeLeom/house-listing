@@ -14,7 +14,7 @@ function ListingItem({listing, id, onDelete}) {
 
           <p className="categoryListingName">{listing.name}</p>
 
-          <p className="categoryListingPrice">₦{listing.offer ? listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : listing.regularePricetoString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          <p className="categoryListingPrice">₦{listing.offer ? listing.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : listing.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           {listing.type === 'rent' && ' / Month'}
           </p>
 
