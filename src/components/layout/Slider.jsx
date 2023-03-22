@@ -57,7 +57,7 @@ function Slider() {
                 <SwiperSlide key={id} onClick={() => navigate(`/category/${data.type}/${id}`)}>
                     <div style={{background: `url(${data.imageUrls[0]}) center no-repeat`, backgroundSize: 'cover', height: 300}} className='swiperSlideDiv'>
                         <p className="swiperSlideText">{data.name}</p>
-                        <p className="swiperSlidePrice">₦ {data.discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')  ?? data.regularPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') }
+                        <p className="swiperSlidePrice">₦ {data.discountedPrice ?? data.regularPrice }
                            {' '}{data.type === 'rent' && ' / month'}
                         </p>
                     </div>
